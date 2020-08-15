@@ -1,0 +1,64 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5),
+              0 6px 20px 0 rgba(0,0,0,0.39);
+  background: lightgrey;
+  margin-bottom : 5%;
+  border-radius: 10px;
+  padding : 2%;
+  overflow: auto;
+  resize: both;
+}
+
+.card:hover {
+  background: grey;
+}
+
+.header {
+  background-color: #425a8a;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+/* $myactivecolor: #2d4a85;
+$mystaticcolor: #425a8a;
+$myinactivecolor: #566787; */
+
+a {
+  color: #425a8a
+}
+
+a:hover, a:active {
+  color: #7a89a3
+}
+
+.btn-sample {
+  color: #FFFFFF;
+  background-color: #425a8a;
+  border-color: #425a8a;
+  margin-right:10px;
+  margin-left:10px
+}
+
+.btn-sample:hover, .btn-sample:focus, .btn-sample:active, .btn-sample.active, .open .dropdown-toggle.btn-sample {
+  color: #FFFFFF;
+  background-color: #2d4a85;
+  border-color: #425a8a;
+}
+
+.btn-sample.disabled, .btn-sample[disabled], fieldset[disabled] .btn-sample, .btn-sample.disabled:hover, .btn-sample[disabled]:hover,
+fieldset[disabled] .btn-sample:hover, .btn-sample.disabled:focus, .btn-sample[disabled]:focus,
+fieldset[disabled] .btn-sample:focus, .btn-sample.disabled:active, .btn-sample[disabled]:active,
+fieldset[disabled] .btn-sample:active, .btn-sample.disabled.active, .btn-sample[disabled].active,
+fieldset[disabled] .btn-sample.active {
+  background-color: #566787;
+  border-color: #425a8a;
+}
+
+.btn-sample .badge {
+  color: #425a8a;
+  background-color: #FFFFFF;
+}

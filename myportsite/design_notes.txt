@@ -1,0 +1,38 @@
+Trello-esque with a taste of habitica
+top banner with current date, time, weather(?) in C and F
+secondary bar with tabs to switch between boards + a button for a dashboard view
+
+main area with modular to-do lists for different things of a certain type
+ - boards can be used for different purposes: adulting, chores, school, work, creative projects, etc.
+ - each board will have an expandable calendar mode
+ - to-do lists within those boards can have titles, subtitles: like within chores there can be personal hygiene, fish maintenance, kitchen, etc.
+ - these things can be color-coordinated to one's preferences
+ - items on a to-do list can have different flags, such as urgent and/or repeatable (with settings to dictate)
+ - to-do list items can have sub-items as well
+
+dashboard view features:
+ - a condensed calendar view that incorporates all of the calendar items of all of the boards into one
+ - a list of incomplete repeatable list items from all the boards
+ - all of the upcoming items with due-dates
+ - a "do today" list that includes manually added items without a set due date
+
+
+board model:
+ - title (unique)
+ - description (optional)
+ - comments (optional)
+
+todo-list model:
+ - title
+ - subtitle (optional)
+ - time created
+ - reference to parent board
+
+todo-list-item model:
+ - item name
+ - completed? (Boolean), default False
+ - recurring? (Boolean), default False
+ - recurring, set interval
+ - recurring, restart count after completion rather than between set timeframes (Boolean)
+ - due date (optional)
+ - reference to parent to-do list
