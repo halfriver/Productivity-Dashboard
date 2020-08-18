@@ -1,16 +1,51 @@
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5),
-              0 6px 20px 0 rgba(0,0,0,0.39);
-  background: lightgrey;
-  margin-bottom : 5%;
-  border-radius: 10px;
-  padding : 2%;
-  overflow: auto;
-  resize: both;
+.column {
+  float:left;
+  width:320px;
+  height:100%;
 }
 
-.card:hover {
-  background: grey;
+.card {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+  background: white;
+  margin: 10px 5px 5px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.card-header {
+  position: relative;
+  background-color: #425a8a;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  margin: -6px -6px 0 -6px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.card-content {
+}
+
+.card-toggle {
+  position: absolute;
+}
+
+.card-placeholder {
+  border: 1px;
+  height: 100px;
+  background: #dadde6;
+  border-radius: 5px;
+  margin: 10px 15px 0 5px;
+}
+
+.list-item {
+  /* border: 1px solid #425a8a; */
+  margin: 5px 0 0 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.subitem-list {
+  padding: 0 0 0 20px;
 }
 
 .header {
@@ -23,32 +58,49 @@
   border-radius: 0px 0px 5px 5px;
 }
 
+.board-area-top {
+  background-color: #e9ebf0;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.board-area-body {
+  background-color: #e9ebf0;
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 0 5px 5px 5px;
+  border-radius: 5px;
+  height: 100%;
+  overflow: scroll;
+}
+
 /* $myactivecolor: #2d4a85;
 $mystaticcolor: #425a8a;
 $myinactivecolor: #566787; */
 
 a {
-  color: #425a8a
+  color: #7a89a3;
 }
 
 a:hover, a:active {
-  color: #7a89a3
+  color: #425a8a;
 }
 
+/* sample button */
 .btn-sample {
   color: #FFFFFF;
   background-color: #425a8a;
   border-color: #425a8a;
   margin-right:10px;
-  margin-left:10px
+  margin-left:10px;
 }
-
 .btn-sample:hover, .btn-sample:focus, .btn-sample:active, .btn-sample.active, .open .dropdown-toggle.btn-sample {
   color: #FFFFFF;
   background-color: #2d4a85;
   border-color: #425a8a;
 }
-
 .btn-sample.disabled, .btn-sample[disabled], fieldset[disabled] .btn-sample, .btn-sample.disabled:hover, .btn-sample[disabled]:hover,
 fieldset[disabled] .btn-sample:hover, .btn-sample.disabled:focus, .btn-sample[disabled]:focus,
 fieldset[disabled] .btn-sample:focus, .btn-sample.disabled:active, .btn-sample[disabled]:active,
@@ -57,8 +109,42 @@ fieldset[disabled] .btn-sample.active {
   background-color: #566787;
   border-color: #425a8a;
 }
-
 .btn-sample .badge {
   color: #425a8a;
   background-color: #FFFFFF;
+}
+
+.side-option {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+.tab-pane {
+  padding:5px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+/* change color of tab borders */
+.nav-link .nav-tabs .nav-item {
+  border-top-color: #dee2e6;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: #dee2e6;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: #dee2e6;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #dee2e6;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+html, body, .tab-content {
+  height: 93.5%;
+  width: 100%;
 }
