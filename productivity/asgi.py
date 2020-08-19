@@ -1,5 +1,5 @@
 """
-ASGI config for myportsite project.
+ASGI config for productivity project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
