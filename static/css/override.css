@@ -22,7 +22,13 @@
   border-radius: 5px 5px 5px 5px;
 }
 
-.card-content {
+.list-options {
+  color: white;
+}
+
+.list-options:hover {
+  background: #324873;
+  color: white;
 }
 
 .card-toggle {
@@ -38,10 +44,14 @@
 }
 
 .list-item {
-  /* border: 1px solid #425a8a; */
+  border: 1px solid #425a8a;
   margin: 5px 0 0 0;
   padding: 5px;
   border-radius: 5px;
+}
+
+.list-item:hover {
+  background: #dadde6;
 }
 
 .subitem-list {
@@ -115,8 +125,6 @@ fieldset[disabled] .btn-sample.active {
 }
 
 .side-option {
-  display: inline-block;
-  vertical-align: middle;
   float: right;
 }
 

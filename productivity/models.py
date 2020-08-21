@@ -9,7 +9,7 @@ class Board(models.Model):
         return self.name
 
 class TodoGroup(models.Model):
-    name = models.CharField(max_length=30, blank=True, default="New To-Do")
+    name = models.CharField(max_length=30, blank=True, default="New Group")
     board = models.ForeignKey(Board, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -21,7 +21,7 @@ class TodoList(models.Model):
      subtitle = models.CharField(max_length=30, blank=True, default="")
      date_submit = models.DateTimeField(default=timezone.now)
      board = models.ForeignKey(Board, on_delete=models.CASCADE)
-     group = models.ForeignKey(TodoGroup, on_delete=models.CASCADE, null=True)
+     group = models.ForeignKey(TodoGroup, on_delete=models.CASCADE, blank=True, null=True)
 
      def __str__(self):
         return self.name
@@ -47,6 +47,7 @@ class TodoSubitem(models.Model):
     name = models.CharField(max_length=30, blank=True, default="")
     completed = models.BooleanField(default=False)
     urgent = models.BooleanField(default=False)
+    today = models.BooleanField(default=False)
     item = models.ForeignKey(TodoItem, on_delete=models.CASCADE)
 
     def __str__(self):

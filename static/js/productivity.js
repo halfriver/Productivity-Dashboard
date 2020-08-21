@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
   var scriptInterpreter;
-  $(function() {
+  $( function() {
     $(".column" ).sortable({
       connectWith: ".column",
       handle: ".card-header",
@@ -20,5 +20,9 @@ $(document).ready(function() {
         icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
         icon.closest( ".card" ).find( ".card-content" ).toggle();
       });
+  });
+  $( function() {
+    $( ".sortable" ).sortable();
+    $( ".sortable" ).disableSelection();
   });
 });
