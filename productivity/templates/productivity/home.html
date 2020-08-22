@@ -60,47 +60,70 @@
                 <div class="column">
                   <div class="card">
                     <div class="card-header">
-                      <span class="align-bottom">{{j}}</span>
-                      <span class="dropdown">
-                        <button class="btn list-options side-options float-right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                          </svg>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Edit To-Do List</a>
-                          <a class="dropdown-item" href="#">Create New To-Do Item</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Delete</a>
-                        </div>
-                      </div>
-                    </span>
+                      <table style="width: 100%">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <span>{{j}}</span>
+                            </td>
+                            <td>
+                              <span class="dropdown">
+                                <button class="btn list-options side-option float-right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                  </svg>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Edit To-Do List</a>
+                                  <a class="dropdown-item" href="#">Create New To-Do Item</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                     <div class="sortable">
                       {% for k in j.todoitem_set.all %}
                         <div class="list-item ui-state-default">
-                          <div class="form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="{{k|cut:" "}}-check">
-                            <label class="form-check-label" for="{{k|cut:" "}}-check">{{k}}</label>
-                          </div>
-                          <a class="side-option">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                            </svg>
-                          </a>
-                          {% for l in k.todosubitem_set.all %}
-                            <div class="subitem-list">
-                              <div class="form-check-inline">
-                                <input type="checkbox" class="form-check-input" id="{{l|cut:" "}}-check">
-                                <label class="form-check-label" for="{{l|cut:" "}}-check">{{l}}</label>
-                              </div>
-                              <a class="side-option">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                  <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                                </svg>
-                              </a>
-                              <br>
-                            </div>
+                          <table style="width: 100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="{{k|cut:" "}}-check">
+                                    <label class="form-check-label" for="{{k|cut:" "}}-check">{{k}}</label>
+                                  </div>
+                                </td>
+                                <td>
+                                  <button class="btn side-option float-right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                    </svg>
+                                  </button>
+                                </td>
+                              </tr>
+                              {% for l in k.todosubitem_set.all %}
+                            <tr>
+                              <td>
+                                <div class="form-check-inline subitem-list">
+                                  <input type="checkbox" class="form-check-input" id="{{l|cut:" "}}-check">
+                                  <label class="form-check-label" for="{{l|cut:" "}}-check">{{l}}</label>
+                                </div>
+                              </td>
+                              <td>
+                                <button class="btn side-option float-right" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                                  </svg>
+                                </button>
+                              </td>
+                            </tr>
                           {% endfor %}
+                        </tbody>
+                      </table>
                         </div>
                       {% endfor %}
                       <!-- <div class="list-item">
